@@ -1,5 +1,5 @@
 def likes(names):
-    """"Solution see https://www.codewars.com/kata/5266876b8f4bf2da9b000362/solutions/python/all/best_practices"""
+    """Solution see https://www.codewars.com/kata/5266876b8f4bf2da9b000362/solutions/python/all/best_practices"""
     n = len(names)
     return {
         0: "no one likes this",
