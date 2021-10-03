@@ -1,3 +1,16 @@
+def count_bits(n):
+    # see https://www.codewars.com/kata/526571aae218b8ee490006f4/train/python
+
+    n = str(int(bin(n)[2:]))
+    bits = 0
+
+    for char in n:
+        if char == "1":
+            bits += 1
+
+    return bits
+
+
 def likes(names):
     """Solution see https://www.codewars.com/kata/5266876b8f4bf2da9b000362/solutions/python/all/best_practices"""
     n = len(names)
@@ -54,6 +67,18 @@ def who_likes(ppl_who_liked_array):
             return msg + f" and {rest_ppl} others like this"
 
 
-if __name__ == "__main__":
-    ppls = ["Marc", "Benoit", "Camille", "Jean", "Louise"]
-    who_likes(ppls)
+def tower_builder():
+    # see https://www.codewars.com/kata/576757b1df89ecf5bd00073b/train/python
+
+    n_floors = 10
+    blocks = []
+
+    for i in range(n_floors):
+        blocks.append("*")
+
+    print(blocks)
+
+
+def str_to_hash(st):
+    # see https://www.codewars.com/kata/52180ce6f626d55cf8000071
+    pass
