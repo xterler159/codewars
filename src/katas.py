@@ -81,4 +81,17 @@ def tower_builder():
 
 def str_to_hash(st):
     # see https://www.codewars.com/kata/52180ce6f626d55cf8000071
-    pass
+    if len(st) != 0:
+        st = st.split(", ")
+        splitted = []
+        dic = {}
+
+        for s in st:
+            splitted.append(s.split("="))
+
+        for spli in splitted:
+            dic[spli[0]] = int(spli[1])
+
+        return dic
+
+    return {}
