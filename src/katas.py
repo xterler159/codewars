@@ -1,3 +1,6 @@
+from ast import Raise
+
+
 def count_bits(n):
     # see https://www.codewars.com/kata/526571aae218b8ee490006f4/train/python
 
@@ -95,3 +98,41 @@ def str_to_hash(st):
         return dic
 
     return {}
+
+
+def deadfish_parser(command: str):
+    """
+    https://www.codewars.com/kata/51e0007c1f9378fa810002a9
+
+    Write a simple parser that will parse and run Deadfish.
+    Deadfish has 4 commands, each 1 character long:
+
+    i increments the value (initially 0)
+    d decrements the value
+    s squares the value
+    o outputs the value into the return array
+
+    ex: parse("iiisdoso")  ==>  [8, 64]
+    """
+    valid_commands = ["i", "d", "s", "o"]
+    values = []
+    init_value = 0
+
+    for char in command:
+        if char in valid_commands:
+            if char == "i":
+                init_value += 1
+
+            if char == "d":
+                init_value -= 1
+
+            if char == "s":
+                init_value = init_value**2
+
+            if char == "o":
+                values.append(init_value)
+
+        else:
+            raise Exception("Invalid command.")
+
+    return values
